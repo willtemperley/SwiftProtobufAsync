@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message ArchiveMessage {
+    enum MessageType {
+        T0 = 0;
+        T1 = 1;
+        T2 = 2;
+        T3 = 3;
+        T4 = 4;
+        T6 = 6;
+    }
+
+    MessageType messageType = 1;
+    uint64 timestamp = 2;
+    uint32 objId = 3;
+    bytes body = 4;
+}
